@@ -3,84 +3,309 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Discover Jesus | Hope & Truth</title>
+<meta name="description" content="Discover Jesus Christ: explore the four Gospels, learn about His life and teachings, read the Bible and discover the Christian faith.">
+<title>Discover Jesus | Hope, Truth & New Life</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Georgia,serif;background:#f8f5ed;color:#292b32;line-height:1.7}
-header{background:#142b43;color:white;text-align:center;padding:65px 20px}
-header h1{font-size:clamp(38px,7vw,65px);margin:0}
-header p{font-size:19px;color:#e8d8b0}
-nav{background:#203d59;padding:15px;text-align:center}
-nav a{color:white;text-decoration:none;margin:0 12px;font-family:Arial}
-section{max-width:850px;margin:auto;padding:55px 25px;text-align:center}
-h2{color:#9a7135;font-size:30px}
-.verse{background:#eee5d3;padding:30px;border-radius:14px;font-size:23px;font-style:italic}
-.hero{background:linear-gradient(135deg,#d9c49c,#f7f0df);padding:55px 20px;border-radius:18px}
-.button{display:inline-block;background:#a47a3c;color:white;padding:13px 25px;border-radius:30px;text-decoration:none;margin-top:15px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
-.card{background:white;padding:25px;border-radius:14px;box-shadow:0 4px 15px #00000012}
-footer{background:#142b43;color:white;text-align:center;padding:30px}
+:root{
+  --navy:#10283e;--blue:#1d4059;--gold:#d4ad68;
+  --cream:#f8f5ed;--ink:#26313a;--muted:#68737b;
+  --white:#fff;--line:#e8e0d2;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);
+font-family:Georgia,'Times New Roman',serif;line-height:1.7}
+a{color:inherit}
+.topbar{background:#0b1d2d;color:#e8d8b7;text-align:center;
+padding:8px 15px;font:12px Arial;letter-spacing:2px}
+header{background:var(--navy);color:white;padding:18px 6%;
+display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:bold;letter-spacing:1px}
+.logo span{color:var(--gold)}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{font:13px Arial;text-decoration:none;color:#e9edf0}
+nav a:hover{color:var(--gold)}
+.hero{min-height:560px;padding:100px 8%;display:flex;align-items:center;
+background:linear-gradient(90deg,rgba(8,25,40,.94),rgba(8,25,40,.65)),
+linear-gradient(135deg,#36566a,#a88b60);
+color:white}
+.hero-inner{max-width:760px}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:4px;
+font:12px Arial;font-weight:bold}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.08;margin:18px 0}
+.hero p{font-size:20px;color:#e6e8e9;max-width:650px}
+.btn{display:inline-block;text-decoration:none;background:var(--gold);
+color:#172b3b;padding:13px 23px;border-radius:4px;font:bold 14px Arial;
+margin:10px 8px 0 0;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn.outline{background:transparent;color:white;border:1px solid #d9c18f}
+section{padding:75px 7%;scroll-margin-top:20px}
+.section-head{text-align:center;max-width:760px;margin:0 auto 38px}
+.kicker{color:#a77d3d;text-transform:uppercase;letter-spacing:3px;
+font:12px Arial;font-weight:bold}
+h2{font-size:clamp(30px,4vw,43px);color:var(--navy);line-height:1.2;margin:10px 0}
+.section-head p{color:var(--muted);font-size:17px}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;
+max-width:1100px;margin:auto;align-items:center}
+.intro-panel{background:white;border:1px solid var(--line);padding:35px;border-radius:10px}
+.intro-panel h3{font-size:25px;color:var(--navy);margin-top:0}
+.big-cross{min-height:280px;border-radius:10px;background:linear-gradient(145deg,#193950,#365d6d);
+display:flex;align-items:center;justify-content:center;color:#e2c58d;font-size:105px}
+.verse{background:#eee5d5;text-align:center;padding:38px 25px;border-radius:10px;
+max-width:900px;margin:35px auto}
+.verse blockquote{font-size:clamp(21px,3vw,30px);font-style:italic;
+color:#344353;margin:0}
+.verse cite{display:block;margin-top:15px;color:#9a7135;font: bold 13px Arial}
+.gospels{background:#fff}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+max-width:1200px;margin:auto}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:9px;
+padding:25px;display:flex;flex-direction:column}
+.card .number{font:12px Arial;color:#a77d3d;letter-spacing:2px}
+.card h3{color:var(--navy);font-size:25px;margin:9px 0}
+.card p{color:var(--muted);font-size:15px;flex:1}
+.card a{font:bold 13px Arial;color:#805b28;text-decoration:none;
+border-bottom:1px solid var(--gold);padding-bottom:5px;align-self:flex-start}
+.card a:hover{color:#142d43}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+max-width:1100px;margin:auto}
+.feature{padding:25px;background:white;border-radius:8px;border:1px solid var(--line)}
+.feature .symbol{font-size:27px;color:#a77d3d}
+.feature h3{color:var(--navy);margin:8px 0}
+.feature p{color:var(--muted);font-size:15px;margin-bottom:0}
+.timeline{max-width:850px;margin:auto}
+.event{display:grid;grid-template-columns:145px 1fr;gap:22px;
+padding:22px 0;border-bottom:1px solid var(--line)}
+.event strong{color:#9a7135;font: bold 13px Arial;text-transform:uppercase;
+letter-spacing:1px;padding-top:5px}
+.event h3{margin:0;color:var(--navy);font-size:21px}
+.event p{margin:5px 0;color:var(--muted)}
+.dark{background:var(--navy);color:white}
+.dark h2{color:white}
+.dark .section-head p{color:#d2dbe0}
+.dark .feature{background:#19374d;border-color:#315166}
+.dark .feature h3{color:#f3dfb7}
+.dark .feature p{color:#d1dce2}
+.steps{max-width:850px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.step{border:1px solid #3b586b;padding:22px;border-radius:8px}
+.step b{color:var(--gold);font:12px Arial;letter-spacing:2px}
+.step h3{margin:6px 0;color:#fff}
+.step p{margin:0;color:#d1dce2;font-size:15px}
+.prayer-box{max-width:850px;margin:auto;background:white;padding:35px;
+border-radius:10px;border:1px solid var(--line);text-align:center}
+.prayer-box p{font-size:19px;font-style:italic;color:#45515b}
+.faq{max-width:850px;margin:auto}
+details{background:white;border:1px solid var(--line);border-radius:7px;
+padding:17px 20px;margin:10px 0}
+summary{cursor:pointer;color:var(--navy);font-weight:bold}
+details p{color:var(--muted)}
+.cta{text-align:center;background:#e9dfcc;padding:65px 20px}
+.cta h2{margin-top:0}
+footer{background:#0b1d2d;color:#d5dce0;padding:45px 7% 25px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+footer h3,footer h4{color:#e4c78f}
+footer a{display:block;text-decoration:none;color:#d5dce0;font:14px Arial;margin:8px 0}
+footer a:hover{color:var(--gold)}
+footer p{font-size:14px;color:#c0cbd1}
+.copyright{border-top:1px solid #314452;margin-top:30px;padding-top:20px;
+font:12px Arial;color:#aebbc3;text-align:center}
+@media(max-width:850px){
+ .cards{grid-template-columns:repeat(2,1fr)}
+ .intro-grid{grid-template-columns:1fr}
+ .feature-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+ header{justify-content:center;text-align:center}
+ nav{justify-content:center;gap:12px}
+ .hero{padding:75px 7%;min-height:500px}
+ section{padding:55px 6%}
+ .cards,.feature-grid,.steps{grid-template-columns:1fr}
+ .event{grid-template-columns:1fr;gap:5px}
+ .footer-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
+
+<div class="topbar">A PLACE TO EXPLORE THE LIFE AND TEACHINGS OF JESUS</div>
+
 <header>
-<h1>✝ Discover Jesus</h1>
-<p>Discover His love. Find your hope. Follow His light.</p>
+ <div class="logo">✝ DISCOVER <span>JESUS</span></div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#about">About Jesus</a>
+  <a href="#gospels">Four Gospels</a>
+  <a href="#teachings">Teachings</a>
+  <a href="#prayer">Prayer</a>
+ </nav>
 </header>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#message">The Message</a>
-<a href="#bible">Bible Verse</a>
-<a href="#prayer">Prayer</a>
-</nav>
-
-<section id="home">
-<div class="hero">
-<h2>You Are Loved</h2>
-<p>Jesus offers hope, forgiveness and a new beginning. No matter who you are or what your story is, you are welcome to discover His love.</p>
-<a class="button" href="#message">Discover More</a>
-</div>
+<main>
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <div class="eyebrow">Faith · Hope · Love</div>
+  <h1>Discover the life-changing message of Jesus.</h1>
+  <p>Explore who Jesus is, what He taught, why Christians believe He came, and how you can begin reading the Bible for yourself.</p>
+  <a class="btn" href="#gospels">READ THE FOUR GOSPELS</a>
+  <a class="btn outline" href="#about">EXPLORE HIS STORY</a>
+ </div>
 </section>
 
-<section id="message">
-<h2>The Good News</h2>
-<div class="cards">
-<div class="card">
-<h3>❤️ God's Love</h3>
-<p>God loves you and wants you to know Him.</p>
-</div>
-<div class="card">
-<h3>✝ Jesus' Sacrifice</h3>
-<p>Jesus gave His life so that we could be forgiven and reconciled with God.</p>
-</div>
-<div class="card">
-<h3>🕊 A New Beginning</h3>
-<p>Through faith in Jesus, we can find hope and a new direction in life.</p>
-</div>
-</div>
+<section id="about">
+ <div class="intro-grid">
+  <div class="intro-panel">
+   <div class="kicker">Who is Jesus?</div>
+   <h2>A story of love, grace and hope.</h2>
+   <p>Christians believe Jesus Christ is the Son of God and the Saviour of the world. His life, teachings, death and resurrection are at the centre of the Christian faith.</p>
+   <p>Jesus welcomed people, cared for those who were overlooked, taught about God's Kingdom and called people to love God and their neighbours.</p>
+   <a class="btn" href="#gospels">Meet Jesus in the Gospels</a>
+  </div>
+  <div class="big-cross" aria-label="Cross symbol">✝</div>
+ </div>
+ <div class="verse">
+  <blockquote>“For God so loved the world, that he gave his only begotten Son.”</blockquote>
+  <cite>JOHN 3:16 · KING JAMES VERSION</cite>
+ </div>
 </section>
 
-<section id="bible">
-<h2>A Message From The Bible</h2>
-<div class="verse">
-"For God so loved the world, that he gave his only begotten Son."
-<p><strong>John 3:16 (KJV)</strong></p>
-</div>
+<section class="gospels" id="gospels">
+ <div class="section-head">
+  <div class="kicker">Start reading for free</div>
+  <h2>Meet Jesus through the Four Gospels</h2>
+  <p>The four Gospels tell the story of Jesus from different perspectives. Choose one to begin reading online for free.</p>
+ </div>
+ <div class="cards">
+  <article class="card">
+   <div class="number">GOSPEL 01</div>
+   <h3>Matthew</h3>
+   <p>Explore Jesus as the promised Messiah. Matthew includes the Sermon on the Mount, parables, miracles and the Great Commission.</p>
+   <a href="https://www.biblegateway.com/passage/?search=Matthew%201&version=KJV" target="_blank" rel="noopener">READ MATTHEW FREE ↗</a>
+  </article>
+  <article class="card">
+   <div class="number">GOSPEL 02</div>
+   <h3>Mark</h3>
+   <p>A fast-moving account of Jesus' ministry. Discover His miracles, His compassion, His authority and the events leading to the resurrection.</p>
+   <a href="https://www.biblegateway.com/passage/?search=Mark%201&version=KJV" target="_blank" rel="noopener">READ MARK FREE ↗</a>
+  </article>
+  <article class="card">
+   <div class="number">GOSPEL 03</div>
+   <h3>Luke</h3>
+   <p>Read about Jesus' birth, His care for outsiders, well-known parables and His journey to Jerusalem.</p>
+   <a href="https://www.biblegateway.com/passage/?search=Luke%201&version=KJV" target="_blank" rel="noopener">READ LUKE FREE ↗</a>
+  </article>
+  <article class="card">
+   <div class="number">GOSPEL 04</div>
+   <h3>John</h3>
+   <p>Explore signs, conversations and teachings that reveal why Christians believe Jesus is the Son of God and the source of eternal life.</p>
+   <a href="https://www.biblegateway.com/passage/?search=John%201&version=KJV" target="_blank" rel="noopener">READ JOHN FREE ↗</a>
+  </article>
+ </div>
+ <p style="text-align:center;color:#68737b;font:13px Arial;margin-top:25px">
+  These links open the King James Version (KJV) on Bible Gateway. Reading is free; the site may display its own optional features.
+ </p>
 </section>
 
-<section id="prayer">
-<h2>Want to Pray?</h2>
-<p>You can talk to God honestly, in your own words. Here is a simple prayer:</p>
-<div class="card">
-<p>"Dear God, thank You for loving me. Help me to know Jesus, grow in faith and follow Your ways. Please guide me every day. Amen."</p>
-</div>
+<section id="teachings">
+ <div class="section-head">
+  <div class="kicker">What did Jesus teach?</div>
+  <h2>Teachings that shape Christian life</h2>
+  <p>Jesus taught people to love God, care for others, forgive, serve and live with humility.</p>
+ </div>
+ <div class="feature-grid">
+  <article class="feature"><div class="symbol">♡</div><h3>Love your neighbour</h3><p>Treat others with kindness, dignity and compassion, including people who are different from you.</p></article>
+  <article class="feature"><div class="symbol">✧</div><h3>Forgiveness</h3><p>Jesus taught people to forgive and to seek reconciliation rather than hold on to bitterness.</p></article>
+  <article class="feature"><div class="symbol">☼</div><h3>Humility</h3><p>Greatness is not about showing off. Jesus taught that serving others matters.</p></article>
+  <article class="feature"><div class="symbol">♡</div><h3>Compassion</h3><p>Notice people who are struggling and respond with practical care and generosity.</p></article>
+  <article class="feature"><div class="symbol">✝</div><h3>Faith</h3><p>Trust God, seek truth and build a relationship with Him through prayer and Scripture.</p></article>
+  <article class="feature"><div class="symbol">☁</div><h3>Hope</h3><p>The Christian message says that God's love and grace offer hope even in difficult times.</p></article>
+ </div>
 </section>
+
+<section class="dark" id="story">
+ <div class="section-head">
+  <div class="kicker">The story of Jesus</div>
+  <h2>A journey through His life</h2>
+  <p>Here is a simple overview of the major events described in the four Gospels.</p>
+ </div>
+ <div class="steps">
+  <article class="step"><b>01 · BIRTH</b><h3>Born in Bethlehem</h3><p>The Gospels of Matthew and Luke tell of Jesus' birth and the events surrounding it.</p></article>
+  <article class="step"><b>02 · EARLY LIFE</b><h3>Growing up</h3><p>Luke describes Jesus growing up in Nazareth and visiting Jerusalem as a boy.</p></article>
+  <article class="step"><b>03 · MINISTRY</b><h3>Teaching and miracles</h3><p>Jesus travelled, taught about God's Kingdom, healed people and called disciples.</p></article>
+  <article class="step"><b>04 · THE CROSS</b><h3>Death in Jerusalem</h3><p>The Gospels describe Jesus' arrest, trial and crucifixion.</p></article>
+  <article class="step"><b>05 · RESURRECTION</b><h3>The empty tomb</h3><p>The Gospels proclaim that Jesus rose from the dead, a central belief of Christianity.</p></article>
+  <article class="step"><b>06 · THE MISSION</b><h3>A message for the world</h3><p>Jesus' followers were commissioned to share His teachings and make disciples.</p></article>
+ </div>
+</section>
+
+<section>
+ <div class="section-head">
+  <div class="kicker">New to the Bible?</div>
+  <h2>How to start reading</h2>
+  <p>You don't have to read everything at once. Start small and take time to think about what you discover.</p>
+ </div>
+ <div class="feature-grid">
+  <article class="feature"><div class="symbol">1</div><h3>Choose a Gospel</h3><p>John is a popular starting point if you want to explore who Jesus is.</p></article>
+  <article class="feature"><div class="symbol">2</div><h3>Read a little</h3><p>Try one chapter or a short passage. Take your time with it.</p></article>
+  <article class="feature"><div class="symbol">3</div><h3>Ask questions</h3><p>Think about what the passage says, what it means and what you want to explore further.</p></article>
+ </div>
+</section>
+
+<section id="prayer" style="background:#eee7da">
+ <div class="section-head">
+  <div class="kicker">Prayer and reflection</div>
+  <h2>You can talk to God</h2>
+  <p>Prayer does not need complicated words. Christians believe you can speak honestly to God.</p>
+ </div>
+ <div class="prayer-box">
+  <h3 style="color:#17364d">A simple prayer</h3>
+  <p>“Dear God, thank You for Your love. Help me to understand Jesus and His teachings. Guide me to live with kindness, courage, forgiveness and faith. Help me grow in wisdom and love. Amen.”</p>
+  <p style="font:13px Arial;color:#9a7135">You can use your own words too.</p>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="section-head">
+  <div class="kicker">Questions and answers</div>
+  <h2>Frequently asked questions</h2>
+ </div>
+ <div class="faq">
+  <details><summary>What are the four Gospels?</summary><p>Matthew, Mark, Luke and John are the first four books of the New Testament. They each tell the story of Jesus and His teachings.</p></details>
+  <details><summary>Do I need to pay to read the Bible?</summary><p>No. There are free online Bible resources. The links on this page open the King James Version on Bible Gateway.</p></details>
+  <details><summary>Which Gospel should I read first?</summary><p>You could start with Mark for a shorter, direct account, or John for a focused exploration of Jesus' identity and message.</p></details>
+  <details><summary>What is Christianity about?</summary><p>Christianity is centred on belief in God and Jesus Christ. Christians follow Jesus' teachings and believe His death and resurrection bring forgiveness and hope.</p></details>
+  <details><summary>Do I have to understand everything immediately?</summary><p>No. It is fine to take your time, ask questions and discuss what you read with a trusted person or faith leader.</p></details>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="kicker">Your next step</div>
+ <h2>Start with one chapter.</h2>
+ <p>Open one of the four Gospels and discover the story for yourself.</p>
+ <a class="btn" href="#gospels">CHOOSE A GOSPEL</a>
+</section>
+</main>
 
 <footer>
-<h3>✝ Discover Jesus</h3>
-<p>Sharing hope, faith and the love of Christ.</p>
-<p>© 2026 Discover Jesus</p>
+ <div class="footer-grid">
+  <div>
+   <h3>✝ Discover Jesus</h3>
+   <p>A welcoming introduction to Jesus, the Christian faith and the four Gospels. Explore, read, reflect and ask questions.</p>
+  </div>
+  <div>
+   <h4>EXPLORE</h4>
+   <a href="#about">Who is Jesus?</a>
+   <a href="#gospels">The Four Gospels</a>
+   <a href="#teachings">His Teachings</a>
+   <a href="#story">His Life</a>
+  </div>
+  <div>
+   <h4>READ THE BIBLE</h4>
+   <a href="https://www.biblegateway.com/passage/?search=Matthew%201&version=KJV" target="_blank" rel="noopener">Matthew</a>
+   <a href="https://www.biblegateway.com/passage/?search=Mark%201&version=KJV" target="_blank" rel="noopener">Mark</a>
+   <a href="https://www.biblegateway.com/passage/?search=Luke%201&version=KJV" target="_blank" rel="noopener">Luke</a>
+   <a href="https://www.biblegateway.com/passage/?search=John%201&version=KJV" target="_blank" rel="noopener">John</a>
+  </div>
+ </div>
+ <div class="copyright">© 2026 Discover Jesus · Created to share hope, faith and the message of Jesus.</div>
 </footer>
 </body>
 </html>
